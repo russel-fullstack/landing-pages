@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;    
+    padding: 40px 0;
+    align-items: center;
+
+}
+header nav ul{
+    display: flex;
+    gap: 75px;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header nav ul li a{
+    color: white;
+    position: relative;
+}
+header nav ul li a::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: orangered;
+    transition: all 0.5s ease;
+
+}
+header nav ul li a:hover,header nav ul li a:hover::after{
+    width: 100%;
+    color: orangered;
+}
+header button{
+    padding: 15px 30px;
+    font-size: 23px;
+    color: white;
+    background-color: orangered;
+    border-radius: 12px;
+    border: none;
+}
+header button:hover {
+    color: orangered;
+    background-color: white;
+    cursor: pointer;
+}
+.title{
+    background: url(./home-02-skyscraper.jpg) center/cover;
+    height: 600px;
+    padding-top: 200px;
+    padding-left: 50px;
+    color: white;
+}
+.title button{
+    background-color: orangered;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    color: white;
+}
+.title button:hover{
+    color: orangered;
+    background-color: white;
+    border: 1px solid orangered;
+    cursor: pointer;
+}
+section h1{
+    padding: 15px 0px;
+}
+.container{
+    padding-top: 100px;
+    background-color: black;
+}
+.text{
+    padding: 0px 50px;
+}
+.container .text hr{
+    width: 100%;
+    border: 2px solid orangered;
+    margin-bottom: 50px;
+} 
+.gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 45px;
+    margin-bottom: 30px;
+
+}
+.gallery-item h3{
+    padding-top: 20px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.gallery-item p{
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+.container_1{
+    padding-top: 130px;
+    background-color: black;
+}
+.container_1 .text hr {
+    width: 100%;
+    border: 2px solid orangered;
+    margin-bottom: 50px;
+}
+
+.gallery_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 25px;
+    margin-bottom: 70px;
+}
+.inscription{
+    background-color: black;
+    text-align: center;
+    padding: 150px 0;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.inscription input{
+    padding: 25px 150px 25px 20px;
+    font-size: 25px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    width: 43vw;
+}
+.inscription p{
+    font-size: 40px;
+    padding-bottom: 40px;
+    right: 20px;
+}
+.inscription button{
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background-color: orangered;
+    position: absolute;
+    right: 410px;
+    bottom: -177rem;
+}
+.inscription button:hover{
+    color: orangered;
+    background-color: beige;
+    border: 1px solid orangered;
+    cursor: pointer;
+}
+.line{
+    padding: 0px 50px;
+    background-color: rgb(0, 0, 0);
+}
+.line hr{
+    border: 2px solid orangered;
+}
+footer{
+    background-color: black;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: orangered;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 35px;
+
+}
+
