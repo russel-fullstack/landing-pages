@@ -2,17 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+    background-color: black;
 }
 header{
     display: flex;
     justify-content: space-around;
     background-color: black;    
-    padding: 40px 0;
+    padding: 20px 0;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
 }
 header nav ul{
@@ -98,7 +104,14 @@ section h1{
     gap: 10px;
     padding: 0px 45px;
     margin-bottom: 30px;
-
+}
+.gallery-item:hover img{
+    transform: scaleX(-1);
+    transition: all 0.5s ease-in-out;
+}
+.gallery-item_1:hover img{
+    transform: scaleX(-1);
+    transition: all 0.5s ease-in-out;
 }
 .gallery-item h3{
     padding-top: 20px;
@@ -107,6 +120,32 @@ section h1{
     color: white;
 }
 .gallery-item p{
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+.gallery-item_1{
+    flex: 0 0 20em;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+}
+.gallery-item_1::scroll-marker{
+    content: "";
+    height: 1em;
+    width: 1em;
+    background-color: rgba(173, 169, 169, 0.658);
+    border-radius: 50%;
+}
+.gallery-item_1::scroll-marker:target-current{
+    background-color: orangered;
+}
+.gallery-item_1 h3{
+    padding-top: 20px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.gallery-item_1 p{
     padding-bottom: 10px;
     font-size: 20px;
     color: white;
@@ -124,11 +163,56 @@ section h1{
 .gallery_1{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: start;
     gap: 10px;
-    padding: 0px 25px;
-    margin-bottom: 70px;
+    margin: 0 30px 70px 30px;
+    overflow-x: auto;
+    anchor-name: --gallery_1;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+}
+.gallery_1::scroll-marker-group{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+.gallery_1::-webkit-scrollbar{
+    display: none;
+}
+.gallery_1::scroll-button(left){
+    content: "<";
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1em;
+    background-color: orangered;
+    color: white;
+    position: fixed;
+    position-anchor: --gallery_1;
+    position-area: left center;
+    translate: 50%;
+}
+.gallery_1::scroll-button(right){
+    content: ">";
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1em;
+    background-color: orangered;
+    color: white;
+    position: fixed;
+    position-anchor: --gallery_1;
+    position-area: right center;
+    translate: -50%;
+}
+.gallery_1::scroll-button(left):disabled,
+.gallery_1::scroll-button(right):disabled{
+    opacity: 0.5;
+}
+.gallery_1::scroll-button(left):hover,.gallery_1::scroll-button(right):hover{
+    cursor: pointer;
 }
 .inscription{
     background-color: black;
@@ -162,7 +246,7 @@ section h1{
     background-color: orangered;
     position: absolute;
     right: 410px;
-    bottom: -177rem;
+    bottom: -149rem;
 }
 .inscription button:hover{
     color: orangered;
@@ -186,7 +270,6 @@ footer{
     color: orangered;
     padding-top: 30px;
     padding-bottom: 50px;
-    font-size: 35px;
 
 }
 
