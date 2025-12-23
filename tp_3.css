@@ -60,7 +60,7 @@ header button:hover {
     cursor: pointer;
 }
 .title{
-    background: url(./home-02-skyscraper.jpg) center/cover;
+    background: url(./images/home-02-skyscraper.jpg) center/cover;
     height: 600px;
     padding-top: 200px;
     padding-left: 50px;
@@ -246,7 +246,7 @@ section h1{
     background-color: orangered;
     position: absolute;
     right: 410px;
-    bottom: -149rem;
+    bottom: -145.3rem;
 }
 .inscription button:hover{
     color: orangered;
